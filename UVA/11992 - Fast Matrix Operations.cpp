@@ -52,7 +52,6 @@ class Seg{
             relax(idx , L , R);
             return ;
         }
-        check(idx);
         relax(idx , L , R);
         int md = (L + R) >> 1;
         up(l , r , v , L , md , idx * 2 , k);
@@ -66,7 +65,6 @@ class Seg{
             if(type == 2)return 1e9;
             return -1e9;
         }
-        check(idx);
         relax(idx , L , R);
         if(L >= l && R <= r){
             if(type == 1)return T[idx];
