@@ -8,7 +8,6 @@ class Seg{
     vector< int > T , mn , mx  ;
     vector< int > Set , Add ;
     public:
-    Seg(){}
     Seg(int n){
         n = 2 * n;
         T.resize(4 * n , 0);
