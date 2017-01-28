@@ -5,7 +5,7 @@ const int MAXN = 1e3 + 3;
 
 
 class Seg{
-    vector< int > T , mn , mx , Lz ;
+    vector< int > T , mn , mx  ;
     vector< int > Set , Add ;
     public:
     Seg(){}
@@ -14,15 +14,10 @@ class Seg{
         T.resize(4 * n , 0);
         mn.resize(4 * n , 1e9);
         mx.resize(4 * n , -1e9);
-        Lz.resize(4 * n , 0);
         Set.resize(4 * n , 0);
         Add.resize(4 * n , 0);
     }
-    void check(int idx){
-        assert(idx >= 0 && idx < T.size());
-    }
     void up1(int idx , int l , int r , int S , int A){
-//        cout << S << " " << A << endl;
         if(S >= 0){
             T[idx] = S * (r - l + 1);
             mn[idx] = mx[idx] = S;
@@ -30,8 +25,6 @@ class Seg{
             Add[idx] = 0;
         }
         if(A != 0){
-//            cout << A << " << ---\n";
-//            cout << A * (r - l + 1) << " !!\n";
             T[idx] += A * (r - l + 1);
             mn[idx] += A;
             mx[idx] += A;
@@ -58,7 +51,6 @@ class Seg{
             if(k == 1) Add[idx] += v;
             if(k == 2) Set[idx] = v , Add[idx] = 0;
             relax(idx , L , R);
-//            cout << T[idx] << " << \n";
             return ;
         }
         check(idx);
