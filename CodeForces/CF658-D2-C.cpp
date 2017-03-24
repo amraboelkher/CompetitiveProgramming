@@ -5,7 +5,7 @@ const int MAXN = 2e5 + 3;
 vector< int > Adj[MAXN];
 int cur , mx[MAXN] , n , d, h;
 int main(){
-	freopen("in.in" , "r" , stdin);
+
 	scanf("%d%d%d" , &n , &d , &h);
 	if(d > 2 * h || d < h || (h == 1 && n == 2 && d != 1) || (h == 1 && n > 2 && d != 2)){
 		puts("-1");
