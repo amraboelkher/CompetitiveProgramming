@@ -5,7 +5,7 @@ const int MAXN = 2e5 + 3 , MOD = 1e9 + 7;
 ll F[MAXN];
 char S[MAXN];
 ll G(ll x , ll y){
-	if(y == 0) return 0;
+	if(y == 0) return 1;
 	if(y == 1) return x;
 	ll t = G(x , y / 2);t = t * t % MOD;
 	if(y % 2) t = x * t % MOD;
