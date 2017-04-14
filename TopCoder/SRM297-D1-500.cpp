@@ -125,5 +125,3 @@ public:
 };
 
 
-<%:testing-code%>
-//Powered by KawigiEdit 2.1.4 (beta) modified by pivanof!
