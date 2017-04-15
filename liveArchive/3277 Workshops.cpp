@@ -1,5 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
+bool cmp(pair< int , int >&a , pair<int , int> &b){ 
+	return (a.second < b.second || (a.second == b.second && a.first < b.first) );
+}
 int main(){
 
 	int n , m;
@@ -25,8 +28,7 @@ int main(){
 			int no = 60 * (h - 14) + m1;
 			A[i] = make_pair(a , no);
 		}
-		sort(A.begin() , A.end() , [](pair< int , int >&a , pair<int , int> &b){ 
-				return (a.second < b.second || (a.second == b.second && a.first < b.first) ) ; } );
+		sort(A.begin() , A.end() , cmp );
 				
 
 		// trying to  match the largest number of students who have the smallest required time first 
