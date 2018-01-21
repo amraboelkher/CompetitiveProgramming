@@ -1,0 +1,19 @@
+4 1
+1 2 2 1
+
+1 2 2 2  sum segm tree
+2 2 2 1  dp k = 1
+
+0 0 2 2  sum segm tree
+4 3 2 1  dp k = 2
+
+-several other approaches for getting max 1D array 
+-kadane algo for max 1D array is acting like a dp also ! :D 
+-2D max sum n^6 
+-2D max sum n^4 query in O(1)
+-2D max sum kadane n^3 [col .. col]
+-max square sub matrix 0s and 1s 
+-max rect submatrix 0s and 1s
+-max sum square submatrix with size k  (stripes/sliding window)
+-edit distance 
+-LCS YES
